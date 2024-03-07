@@ -104,8 +104,7 @@ const Home = () => {
           <h4>Project Name Four</h4>
           <p>
             Project description. A forward-thinking project that integrates the
-            latest web technologies to deliver an unparalleled online
-            experience.
+            latest web technologies to deliveran unparalleled online experience.
           </p>
           <p>DEVELOPMENT TOOLS: TypeScript, Angular, Firebase</p>
           <button className="btn">View Project</button>

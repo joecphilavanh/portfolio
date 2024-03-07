@@ -40,8 +40,8 @@ body {
 }
 
 .intro-line {
-  margin-bottom: 0px; /* Adjust as needed */
-  line-height: 0; /* Adjust as needed for line spacing */
+  margin-bottom: 0px;
+  line-height: 0;
 }
 
 .hero-text h1, .hero-text h2, .hero-text p {
@@ -77,20 +77,22 @@ body {
 
 .about-section {
   width: 50%;
-  padding: 100px 50px; /* Adjusted padding */
+  padding: 100px 50px;
   background-color: white;
   color: rgb(0, 33, 52);
   box-sizing: border-box;
+  margin: 0 auto; /* Center the about section horizontally */
+
 }
 
 .about-section h3 {
-  font-size: 3rem; /* Adjust size as needed */
-  margin-bottom: 40px; /* Adjust space below the ABOUT text */
+  font-size: 3rem;
+  margin-bottom: 40px;
 }
 
 .about-section p {
-  line-height: 2.5; /* Adjusts the spacing between lines */
-  margin-bottom: 15px; /* Adjusts the space between paragraphs */
+  line-height: 2.5;
+  margin-bottom: 15px;
 }
 
 .projects-section, .project-card {
@@ -102,10 +104,10 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 50px; /* Adjusted padding */
+  padding: 50px;
   margin: 0;
   box-sizing: border-box;
-  border-bottom: 1px solid #ddd; /* Optional */
+  border-bottom: 1px solid #ddd;
 }
 
 .project-description, .project-img {
@@ -138,7 +140,7 @@ body {
   }
 
   .profile-img, .project-img {
-    width: 100%; /* Adjust based on your preference */
+    width: 100%;
     margin-left: 0;
     margin-bottom: 20px;
   }
@@ -146,5 +148,18 @@ body {
   .project-card {
     flex-direction: column;
     padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    width: 100%; /* Set width to 100% on smaller screens */
+    padding: 100px 20px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 3rem; /* Further reduce font size for smaller screens */
   }
 }
