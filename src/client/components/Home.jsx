@@ -71,7 +71,7 @@ const Home = () => {
         </div>
         <img src={puckerUp} alt="first project" className="project-img" />
       </div>
-
+      {/* 
       <div className="project-card light">
         <div className="project-description">
           <h4>Project Name Two</h4>
@@ -110,7 +110,7 @@ const Home = () => {
           <button className="btn">View Project</button>
         </div>
         <img src="path-to-your-project-image.jpg" alt="Project Four" />
-      </div>
+      </div> */}
     </div>
   );
 };
