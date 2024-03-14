@@ -2,8 +2,15 @@ import React from "react";
 import "../style/home.css";
 import profilePic from "../img/profile.jpg";
 import puckerUp from "../img/puckerup.png";
+import zayuh from "../img/zayuh.jpeg";
+import github from "../img/github.png";
+import website from "../img/website.png";
+import resumePDF from "../img/resume.pdf";
 
 const Home = () => {
+  const handleResumeButtonClick = () => {
+    window.open(resumePDF, "_blank");
+  };
   return (
     <div className="container">
       <section className="hero-section">
@@ -13,6 +20,9 @@ const Home = () => {
             <h1>Joe Philavanh</h1>
             <h2>Web Developer in Las Vegas</h2>
             <button className="btn">Get in Touch</button>
+            <button className="btn" onClick={handleResumeButtonClick}>
+              Resume
+            </button>
           </div>
           <img src={profilePic} alt="Joe Philavanh" className="profile-img" />
         </div>
@@ -49,43 +59,90 @@ const Home = () => {
           journey together.
         </p>
       </section>
+      <div id="projects-section">
+        <h3>RECENT PROJECTS</h3>
+        <div className="project-card dark">
+          <div className="project-description">
+            <h4>Pucker Up</h4>
+            <p>
+              January 2024 - Embark on a journey of connection with PuckerUp,
+              the cutting-edge dating platform designed to revolutionize the way
+              people meet online. As a key contributor to the front-end
+              development team, I played a pivotal role in creating an intuitive
+              and engaging user experience. PuckerUp stands out with its sleek
+              design and innovative features like instant liking, real-time
+              chatting, and robust user connectivity.
+            </p>
+            <p>
+              DEVELOPMENT TOOLS: Prisma, REACT, CSS, Node.js, Express, Vite.js,
+              PostgreSQL,JSON Web Tokens, and BCrypt
+            </p>
+            <div className="button-container">
+              <a
+                href="https://puckerup.netlify.app"
+                className="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={website} alt="Website" className="website-icon" />
+              </a>
+              <a
+                href="https://github.com/joecphilavanh/Dating-Site"
+                className="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={github} alt="GitHub" className="github-icon" />
+              </a>
+            </div>
+          </div>
 
-      <h3>RECENT PROJECTS</h3>
-      <div className="project-card dark">
-        <div className="project-description">
-          <h4>Pucker Up</h4>
-          <p>
-            January 2024 - Embark on a journey of connection with PuckerUp, the
-            cutting-edge dating platform designed to revolutionize the way
-            people meet online. As a key contributor to the front-end
-            development team, I played a pivotal role in creating an intuitive
-            and engaging user experience. PuckerUp stands out with its sleek
-            design and innovative features like instant liking, real-time
-            chatting, and robust user connectivity.
-          </p>
-          <p>
-            DEVELOPMENT TOOLS: Prisma, REACT, CSS, Node.js, Express, Vite.js,
-            PostgreSQL,JSON Web Tokens, and BCrypt
-          </p>
-          <button className="btn">View Project</button>
+          <img src={puckerUp} alt="dating site" className="project-img" />
         </div>
-        <img src={puckerUp} alt="first project" className="project-img" />
-      </div>
-      {/* 
-      <div className="project-card light">
-        <div className="project-description">
-          <h4>Project Name Two</h4>
-          <p>
-            Project description. A unique project focused on providing
-            user-friendly experiences through intuitive design and responsive
-            layouts.
-          </p>
-          <p>DEVELOPMENT TOOLS: Node.js, Express, MongoDB</p>
-          <button className="btn">View Project</button>
-        </div>
-        <img src="path-to-your-project-image.jpg" alt="Project Two" />
-      </div>
 
+        <div className="project-card light">
+          <div className="project-description">
+            <h4>Zayuhs Portfolio</h4>
+            <p>
+              Project description. Dive into Zayuh's Portfolio, a visual
+              adventure in the making! I'm bringing the creative flair as a
+              front-end developer to craft an immersive user experience. Explore
+              captivating snapshots through Zayuh's lens, featuring sleek design
+              and cool features. While it's still a work in progress, our site
+              is gearing up to showcase some serious photographic magic!
+            </p>
+            <p>
+              DEVELOPMENT TOOLS: Prisma, REACT, CSS, Node.js, Express, Vite.js,
+            </p>
+            <div className="button-container">
+              <a
+                href="https://zayuh.netlify.app/"
+                className="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={website}
+                  alt="View Project"
+                  className="website-icon"
+                />
+              </a>
+              <a
+                href="https://github.com/joecphilavanh/zayuh-portfolio"
+                className="btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={github} alt="GitHub" className="github-icon" />
+              </a>
+            </div>
+          </div>
+          <div className="project-img-container">
+            <img src={zayuh} alt="portfolio" className="project-img zayuh" />
+          </div>
+        </div>
+
+        {/* 
       <div className="project-card dark">
         <div className="project-description">
           <h4>Project Name Three</h4>
@@ -111,6 +168,7 @@ const Home = () => {
         </div>
         <img src="path-to-your-project-image.jpg" alt="Project Four" />
       </div> */}
+      </div>
     </div>
   );
 };
