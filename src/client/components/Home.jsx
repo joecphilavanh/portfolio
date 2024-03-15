@@ -11,6 +11,10 @@ const Home = () => {
   const handleResumeButtonClick = () => {
     window.open(resumePDF, "_blank");
   };
+  const handleContactButtonClick = () => {
+    window.location.href =
+      "mailto:joesmodernlife@gmail.com?subject=Contact&body=Write your message here";
+  };
   return (
     <div className="container">
       <section className="hero-section">
@@ -19,7 +23,9 @@ const Home = () => {
             <p>Hi, My name is</p>
             <h1>Joe Philavanh</h1>
             <h2>Web Developer in Las Vegas</h2>
-            <button className="btn">Get in Touch</button>
+            <button className="btn" onClick={handleContactButtonClick}>
+              Get in Touch
+            </button>
             <button className="btn" onClick={handleResumeButtonClick}>
               Resume
             </button>
